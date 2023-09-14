@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicativo</title>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilos CSS para a classe "animated" */
+        .animated {
+            opacity: 0; /* Comece com uma opacidade de 0 para torná-los invisíveis */
+            transform: translateY(20px); /* Comece com uma pequena transição para cima */
+            animation: fadeIn 1s ease forwards; /* Use a animação 'fadeIn' por 1 segundo */
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1; /* Quando a animação estiver completa, torne-os visíveis com opacidade 1 */
+                transform: translateY(0); /* Volte à posição original (0 de transição) */
+            }
+        }
+
+        /* Estilos CSS restantes... */
+
+        .logo {
+            width: 140px;
+            height: auto;
+            margin-top: auto;
+            margin-right: 30px;
+            margin-left: 30px;
+        }
+
+        header {
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(33, 33, 33, 0.7)), url(fundo4.avif);
+            background-position-x: absolute;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        nav {
+            height: 80px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-right: 40px;
+            font-family: Arial;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        nav ul li::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background-color: #fff;
+            transition: width 0.3s ease-in-out;
+        }
+
+        nav ul li:hover::after {
+            width: 100%;
+        }
+
+        img {
+            position: absolute;
+            top: 10px;
+            left: auto;
+        }
+
+        .btn {
+            width: 150px;
+            height: 50px;
+            background-color: #315d2f;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+            font-family: Arial;
+            font-weight: bold;
+            transition: 0.5s;
+            color: #fff;
+        }
+
+        .btn:hover {
+            background-color: #fff;
+            color: #315d2f;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            overflow-y: hidden;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .pagina-atual {
+            position: relative;
+        }
+
+        .pagina-atual:after {
+            content: "";
+            display: block;
+            border-bottom: 2px solid white;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: left;
+            color: white;
+            margin-top: 100px;
+        }
+
+        .container h1 {
+            font-family: Arial, sans-serif;
+            font-size: 60px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .container h2 {
+            font-family: Arial, sans-serif;
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .container ul {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 30px;
+            list-style: none;
+        }
+
+        .container ul li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .container ul li::before {
+            content: "\2022";
+            position: absolute;
+            left: 0;
+        }
+
+        @keyframes bounce {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .celular {
+            width: 47%;
+            position: absolute;
+            top: 170px;
+            right: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div>
+                <img src="logo.png" alt="" class="logo">
+            </div>
+            <div>
+                <ul class="navlist">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="aplicativo.html" class="pagina-atual">Aplicativo</a></li>
+                    <li><a href="contato.html">Contatos</a></li>
+                    <li><a href="trabalhe.html"><button class="btn">Trabalhe Conosco</button></a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            <h1 class="animated">Baixe o Nosso<br> Aplicativo</h1>
+            <h2 class="animated">Funcionalidades Principais:</h2>
+            <ul class="animated">
+                <li>Monitoramento em tempo real.</li>
+                <li>Acesso aos dados dos sensores.</li>
+                <li>Previsões meteorológicas.</li>
+                <li>Recomendações agrícolas.</li>
+                <li>Interface intuitiva e amigável.</li>
+            </ul>
+            <button class="btn animated">SAIBA MAIS</button>
+        </div>
+        <img src="cell.png" alt="" class="celular animated">
+    </header>
+</body>
+
+</html>

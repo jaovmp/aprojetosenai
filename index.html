@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Início</title>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .logo {
+            width: 140px;
+            height: auto;
+            margin-top: auto;
+            margin-right: 30px;
+            margin-left: 30px;
+        }
+
+        header {
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(33, 33, 33, 0.7)), url(fundo.jpg);
+            background-position-x: absolute;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        nav {
+            height: 80px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-right: 40px;
+            font-family: Arial;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        nav ul li::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background-color: #fff;
+            transition: width 0.3s ease-in-out;
+        }
+
+        nav ul li:hover::after {
+            width: 100%;
+        }
+
+        img {
+            position: absolute;
+            top: 10px;
+            left: auto;
+        }
+
+        .btn {
+            width: 150px;
+            height: 50px;
+            background-color: #315d2f;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+            font-family: Arial;
+            font-weight: bold;
+            transition: 0.5s;
+            color: #fff;
+        }
+
+        .btn:hover {
+            background-color: #fff;
+            color: #315d2f;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            overflow-y: hidden;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: left;
+            color: white;
+        }
+
+
+        .container h1 {
+            font-family: Arial;
+            font-size: 50px;
+            font-weight: bold;
+            margin-top: 110px;
+        }
+
+        .container p {
+            font-family: Arial;
+            font-size: 20px;
+            line-height: 30px;
+            font-weight: bold;
+            margin-top: 35px;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .container.btn {
+            margin-top: 25px;
+        }
+
+
+        @keyframes bounce {
+            from {
+                transform: translateY(50px);
+                /* Desloca os elementos 50px para baixo */
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                /* Sem deslocamento vertical */
+                opacity: 1;
+            }
+        }
+
+        .container h1,
+        .container p,
+        .container .btn {
+            animation: bounce 2s ease-in-out;
+        }
+
+        .pagina-atual {
+            position: relative;
+        }
+
+        .pagina-atual:after {
+            content: "";
+            display: block;
+            border-bottom: 2px solid white;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div>
+                <img src="logo.png" alt="" class="logo">
+            </div>
+            <div>
+                <ul class="navlist">
+                    <li><a href="index.html" class="pagina-atual">Inicio</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="aplicativo.html">Aplicativo</a></li>
+                    <li><a href="contato.html">Contatos</a></li>
+                    <li><a href="trabalhe.html"><button class="btn">Trabalhe Conosco</button></a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            <h1>Bem-Vindo ao Futuro da <br> Agricultura Inteligente</h1>
+
+            <p>Bem-vindo à agricultura do futuro!<br>
+                Com nosso 'Sistema de Monitoramento Agrícola Inteligente',<br>
+                transformamos a forma como você gerencia suas plantações.<br>
+                Descubra como maximizar a produtividade,<br>
+                economizar recursos e adotar práticas sustentáveis.<br>
+                Explore nossos recursos e comece sua jornada agrícola do futuro agora.</p>
+            <button class="btn">Explorar</button>
+
+        </div>
+    </header>
+    
+</body>
+
+</html> 

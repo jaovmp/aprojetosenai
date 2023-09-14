@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhe Conosco</title>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .logo {
+            width: 140px;
+            height: auto;
+            margin-top: auto;
+            margin-right: 30px;
+            margin-left: 30px;
+        }
+
+        header {
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(33, 33, 33, 0.7)), url(fundo5.jpg);
+            background-position-x: absolute;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        nav {
+            height: 80px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-right: 40px;
+            font-family: Arial;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        nav ul li::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background-color: #fff;
+            transition: width 0.3s ease-in-out;
+        }
+
+        nav ul li:hover::after {
+            width: 100%;
+        }
+
+        img {
+            position: absolute;
+            top: 10px;
+            left: auto;
+        }
+
+        .btn {
+            width: 150px;
+            height: 50px;
+            background-color: #315d2f;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+            font-family: Arial;
+            font-weight: bold;
+            transition: 0.5s;
+            color: #fff;
+        }
+
+        .btn:hover {
+            background-color: #fff;
+            color: #315d2f;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            overflow-y: hidden;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .pagina-atual {
+            position: relative;
+        }
+
+        .pagina-atual:after {
+            content: "";
+            display: block;
+            border-bottom: 2px solid white;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: left;
+            color: white;
+            margin-top: 100px;
+        }
+
+        .container h1 {
+            font-family: Arial;
+            font-size: 50px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .container p {
+            font-family: Arial;
+            font-size: 18px;
+            line-height: 30px;
+            font-weight: bold;
+            margin-top: 35px;
+            text-align: justify;
+        }
+
+        @keyframes bounce {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .container h1,
+        .container p,
+        .container .btn {
+            animation: bounce 2s ease-in-out;
+        }
+
+        .login {
+            padding-left: 1000px;
+            margin-top: -480px;
+        }
+
+        .formLogin {
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(74, 74, 74, 0.8);
+            border-radius: 7px;
+            padding: 40px;
+            box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+            gap: 5px;
+            width: 270px;
+            padding-top: 45px;
+            margin-top: -505px;
+        }
+
+        .formLogin h1 {
+            padding: 0;
+            margin: 0;
+            font-family: Arial;
+            font-weight: bold;
+        }
+
+        .formLogin p {
+            display: inline-block;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .formLogin input {
+            padding: 15px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            margin-top: 5px;
+            border-radius: 4px;
+            transition: all linear 160ms;
+            outline: none;
+        }
+
+        .formLogin input:focus {
+            border: 1px solid #315d2f;
+        }
+
+        .formLogin label {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .formLogin a {
+            display: inline-block;
+            margin-bottom: 20px;
+            font-size: 13px;
+            color: #555;
+            transition: all linear 160ms;
+        }
+
+        .formLogin a:hover {
+            color: #315d2f;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div>
+                <img src="logo.png" alt="" class="logo">
+            </div>
+            <div>
+                <ul class="navlist">
+
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="aplicativo.html">Aplicativo</a></li>
+                    <li><a href="contato.html">Contatos</a></li>
+                    <li><a href="trabalhe.html"><button class="btn">Trabalhe Conosco</button></a></li>
+                </ul>
+            </div>
+
+        </nav>
+        <div class="container">
+            <h1>Por Que Nos Escolher?</h1>
+
+            <p> Tecnologia de Ponta: Utilizamos as mais recentes tecnologias e <br>
+                práticas para garantir que nossos clientes tenham acesso às <br>
+                ferramentas mais avançadas disponíveis.<br></p>
+
+            <p> Compromisso com o Sucesso: Seu sucesso é nosso sucesso. <br>
+                Trabalhamos lado a lado com nossos clientes para garantir que <br>
+                eles alcancem os melhores resultados.<br></p>
+
+            <p> Inovação Constante: Estamos sempre buscando maneiras de aprimorar<br>
+                e inovar nossos serviços, garantindo acesso contínuo às soluções <br>
+                mais recentes e eficazes disponíveis no mercado.</p>
+        </div>
+        <div class="login">
+            <form method="POST" class="formLogin">
+                <h1>Criar Conta</h1>
+                <p>Digite os seus dados para criar a conta.</p>
+                <label for="nome">Nome Completo</label>
+                <input type="name" placeholder="Digite seu Nome" autofocus="true" />
+                <label for="email">E-mail</label>
+                <input type="email" placeholder="Digite seu e-mail" autofocus="true" />
+                <label for="password">Criar Senha</label>
+                <input type="password" placeholder="Digite sua senha" />
+                <div><button class="btn">Criar Conta</button></div>
+            </form>
+        </div>
+    </header>
+
+</body>
+
+</html>
